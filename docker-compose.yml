@@ -27,3 +27,10 @@ services:
     stdin_open: true
     environment:
     - CHOKIDAR_USEPOLLING=true
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8085:80

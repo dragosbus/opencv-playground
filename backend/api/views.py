@@ -1,4 +1,4 @@
-from flask import Blueprint, request,make_response
+from flask import Blueprint, request,make_response,Flask
 from .controlers import read_numpy_array
 import time
 from threading import Thread
@@ -56,3 +56,8 @@ def get_image():
         return numpy_array
     except Exception as e:
         print(e)
+
+from flask_socketio import send, emit,SocketIO
+
+socketio = SocketIO(Flask(__name__))
+

@@ -2,3 +2,4 @@ Flask==2.0.2
 Flask-CORS==3.0.10
 uWSGI==2.0.19
 flask_socketio==5.1.1
+gevent
