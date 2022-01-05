@@ -6,6 +6,7 @@ socketio = SocketIO(app, cors_allowed_origins="*", engineio_logger=True)
 
 @socketio.on('connect')
 def handle_my_custom_event():
+    print('connected')
     emit('test', "fff")
     
 @socketio.on('test')
